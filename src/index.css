@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #20112d;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+}
+
+.wrapper {
+  max-width: 1920px;
+  width: 100%;
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+}
+
+.header {
+  width: 1408px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  color: white;
+}
+
+.nav {
+  flex: 1;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-item {
+  margin-right: 20px;
+  cursor: pointer;
+  transform: opacity 500ms easy;
+}
+
+.nav-item:hover {
+  opacity: 0.5;
+}
+
+.logo {
+  flex: 1;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.logo1,
+.logo3 {
+  color: #3ddeed;
+}
+.header-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  opacity: 55%;
+}
+.search-form:hover {
+  opacity: 1;
+}
+
+.search-input {
+  padding: 5px;
+  font-size: 1rem;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+.search-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: color, transform 500ms ease;
+}
+.search-button:hover {
+  color: #3ddeed;
+}
+.shopping-bag-icon {
+  color: #555;
+  font-size: 24px;
+  margin-left: 20px;
+  cursor: pointer;
+  transition: color, transform 500ms ease;
+}
+.shopping-bag-icon:hover {
+  color: #3ddeed;
+}
