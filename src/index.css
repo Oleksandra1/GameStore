@@ -17,12 +17,16 @@ body {
   max-width: 1920px;
   width: 100%;
   margin: 50px auto;
+  padding: 0 20px; /* Внутренние отступы для боковых краев */
+  box-sizing: border-box; /* Включаем отступы в общую ширину */
   display: flex;
-  justify-content: center;
+  flex-direction: column; /* Размещаем элементы вертикально */
+  align-items: center; /* Центрируем по горизонтали */
+  justify-content: center; /* Центрируем по вертикали */
 }
-
-.header {
+.header-top {
   width: 1408px;
+  height: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -44,11 +48,11 @@ body {
 .nav-item {
   margin-right: 20px;
   cursor: pointer;
-  transform: opacity 500ms easy;
+  transform: color 500ms easy;
 }
 
 .nav-item:hover {
-  opacity: 0.5;
+  color: #3ddeed;
 }
 
 .logo {
@@ -71,9 +75,12 @@ body {
 .search-form {
   display: flex;
   align-items: center;
-  opacity: 55%;
+  opacity: 30%;
 }
 .search-form:hover {
+  opacity: 1;
+}
+.search-form:active {
   opacity: 1;
 }
 
@@ -88,14 +95,17 @@ body {
   background: none;
   border: none;
   cursor: pointer;
+  padding-top: 10px;
   margin-left: 10px;
+  color: white;
+  font-size: 24px;
   transition: color, transform 500ms ease;
 }
 .search-button:hover {
   color: #3ddeed;
 }
 .shopping-bag-icon {
-  color: #555;
+  color: white;
   font-size: 24px;
   margin-left: 20px;
   cursor: pointer;
@@ -103,4 +113,159 @@ body {
 }
 .shopping-bag-icon:hover {
   color: #3ddeed;
+}
+.headerMain {
+  position: relative;
+  margin-top: 60px;
+  width: 1408px;
+  display: flex;
+  justify-content: space-between;
+}
+.leftSectionMain {
+  width: 40%;
+  position: absolute;
+  top: 20px;
+  left: 0;
+}
+.firstScreenRight {
+  width: 60%;
+  position: absolute;
+  right: 0;
+  -webkit-box-shadow: 10px -54px 191px 36px rgba(189, 0, 255, 0.27);
+  -moz-box-shadow: 10px -54px 191px 36px rgba(189, 0, 255, 0.27);
+  box-shadow: 10px -54px 191px 36px rgba(189, 0, 255, 0.27);
+}
+.heroImage {
+  position: absolute;
+  top: 30px;
+  right: 0;
+}
+.vectorImg {
+  position: absolute;
+  top: 30px;
+  left: 90px;
+}
+.vector2Img {
+  position: absolute;
+  top: 50px;
+  right: 0;
+}
+
+.socialIcons {
+  margin-top: 30px;
+  display: flex;
+}
+
+.socialIcons > li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+  text-decoration: none;
+  list-style-type: none;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: border 500ms ease;
+}
+
+.socialIcons > li:hover {
+  border: solid 1px #3ddeed;
+}
+.btnSectionMain {
+  display: flex;
+}
+.leftSectionMainButton {
+  display: flex;
+  background: #20112d;
+  color: #3ddeed;
+  border: solid 1px #3ddeed;
+  border-radius: 5px;
+  margin-right: 15px;
+  margin-top: 30px;
+  padding: 10px 15px;
+  align-items: center;
+  cursor: pointer;
+}
+.leftSectionMainButton:hover {
+  background: #3ddeed;
+  color: #20112d;
+  border: solid 1px #3ddeed;
+}
+.leftSectionMain > p {
+  font-size: 16px;
+  text-transform: capitalize;
+}
+.leftSectionMain > h1 {
+  font-size: 70px;
+}
+.leftSectionMain > h4 {
+  margin-top: 30px;
+}
+.IconArrow {
+  padding-left: 10px;
+  padding-bottom: 0;
+}
+.IconExplore {
+  padding-right: 10px;
+  padding-bottom: 0;
+}
+/*-------------      ----------*/
+.content {
+  margin-top: 700px;
+  max-width: 1448px;
+}
+.SectionVirtualHeadsets {
+  max-width: 1448px;
+  height: 550px;
+  display: flex;
+  justify-content: space-between;
+}
+.sectionVHLeft {
+  width: 40%;
+  position: relative;
+}
+.elipse {
+  position: absolute;
+  top: 50px;
+  right: -50px;
+}
+.untitled {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.sectionVHRight {
+  width: 60%;
+  text-align: center; /* Центрирует заголовок по горизонтали */
+  margin-left: 100px;
+}
+.sectionVHRight > h2 {
+  font-size: 56px;
+  margin-top: 100px;
+  margin-bottom: 50px; /* Добавляет отступ под заголовком */
+}
+.customList {
+  list-style: none; /* Убираем стандартные маркеры */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Две колонки равной ширины */
+  gap: 20px; /* Расстояние между колонками и элементами списка */
+  padding-left: 0; /* Убираем отступы */
+}
+
+.customList li {
+  position: relative; /* Для позиционирования иконки */
+  padding-left: 30px; /* Добавляем отступ, чтобы иконка не перекрывала текст */
+  margin-bottom: 10px; /* Отступ между элементами списка */
+  font-size: 16px;
+}
+
+.customList li::before {
+  content: url("./components/imgfirstscreen/SectionVH/Star\ 6.png"); /* Замените на путь к вашей иконке */
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%); /* Центрируем иконку по вертикали */
+  width: 20px; /* Ширина иконки */
+  height: 20px; /* Высота иконки */
 }
