@@ -1,15 +1,13 @@
+import './SectionVirtualHeadsets.css';
 import React, { Component } from 'react'
-import IconStar from './imgfirstscreen/SectionVH/Star 6.png'
-import Elipse from './imgfirstscreen/SectionVH/Ellipse 1200.png'
-import Untitled from './imgfirstscreen/SectionVH/Untitled-1 1.png'
 
 export class SectionVirtualHeadsets extends Component {
   render() {
     return (
       <div className='SectionVirtualHeadsets'>
         <div className='sectionVHLeft'>
-            <img className='elipse' src={Elipse}/>
-            <img className='untitled' src={Untitled}/>
+            <img className='elipse' src="/img/SectionVH/Ellipse1200.png"/>
+            <img className='untitled' src="/img/SectionVH/Untitled.png"/>
         </div>
         <div className='sectionVHRight'>
             <h2>Our Virtual Headsets Shine with Unique 

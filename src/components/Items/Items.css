@@ -1,0 +1,27 @@
+.SectionTopGames {
+  width: 1408px;
+  margin: auto;
+}
+.SectionTopGames > h3 {
+  font-size: 58px;
+  margin-top: 50px;
+}
+
+.SectionTopGames > p {
+  width: 341px;
+  margin-top: 20px;
+}
+
+.sale {
+  color: #3ddeed;
+}
+.slick-dots li button:before {
+  display: none;
+}
+.slick-prev:before,
+.slick-next:before {
+  color: #3ddeed;
+}
+.carts {
+  margin-top: 20px;
+}

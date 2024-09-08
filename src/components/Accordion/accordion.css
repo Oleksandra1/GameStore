@@ -1,0 +1,80 @@
+.section-accordion {
+  margin-top: 50px;
+}
+.section-accordion > h2 {
+  text-align: center;
+  font-size: 56px;
+}
+.accordion {
+  list-style-type: none;
+  margin: 16px;
+  padding: 16px;
+  background-color: #20112d;
+  border-radius: 7px;
+}
+.accordion-item {
+  margin-bottom: 16px;
+  background-color: #22122f;
+  border-radius: 7px;
+}
+.accordion-header {
+  position: relative;
+  width: 100%;
+  padding: 20px 60px 20px 30px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 0;
+  border-radius: 7px;
+  font-size: 24px;
+  text-align: left;
+  cursor: pointer;
+  color: white;
+}
+
+.accordion-collapse {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s;
+}
+.accordion-collapse.open {
+  height: auto;
+}
+.accordion-body {
+  padding: 30px 60px 30px 30px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  font-size: 18px;
+  font-weight: 300;
+  color: #ffffff;
+}
+.arrow-down {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  display: block;
+  width: 30px;
+  height: 17px;
+  fill: white;
+  transform: translateY(-50%);
+}
+.arrow-down.active {
+  transform: rotate(180deg); /* Приклад стилю для зміни стрілки */
+  transition: transform 0.3s ease;
+  fill: #bd00ff;
+}
