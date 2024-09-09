@@ -3,6 +3,7 @@ import Header from "./Components/Header/Header";
 import Items from "./Components/Items/Items";
 import SectionVirtualHeadsets from "./Components/SectionVirtualHeadsets/SectionVirtualHeadsets";
 import Accordion from "./Components/Accordion/Accordion";
+import Footer from "./Components/Footer/Footer";
 
 
 
@@ -64,11 +65,12 @@ class App extends React.Component {
     ]
     return (
       <div className="wrapper">
-        <Header orders={this.state.orders} onDelete={this.deleteOrder}/>
+        <Header id="home" orders={this.state.orders} onDelete={this.deleteOrder}/>
         <div className="content">
           <SectionVirtualHeadsets />
-          <Items items={this.state.items} onAdd={this.addToOrder}/>
-          <Accordion faqList={faqList} />
+          <Items id="top-games" items={this.state.items} onAdd={this.addToOrder}/>
+          <Accordion id="faq" faqList={faqList} />
+          <Footer />
         </div>
       </div>
     );

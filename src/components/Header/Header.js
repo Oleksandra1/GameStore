@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-scroll';
 import './Header.css';
 import { CgSearch } from 'react-icons/cg';
 import { TbShoppingBag } from 'react-icons/tb';
@@ -39,12 +40,20 @@ export default function Header(props) {
     <header className="header">
       <div className='header-top'>
         <nav className="nav">
-          <ul className="nav-list">
-            <li className="nav-item">Home</li>
-            <li className="nav-item">Catalog</li>
-            <li className="nav-item">Contact</li>
-            <li className="nav-item">Features</li>
-          </ul>
+        <ul className="nav-list">
+          <li className="nav-item">
+            <Link to="home" smooth={true} duration={500}>Home</Link>
+          </li>
+          <li className="nav-item">
+            <Link to="top-games" smooth={true} duration={500}>Top Games</Link>
+          </li>
+          <li className="nav-item">
+            <Link to="faq" smooth={true} duration={500}>F.A.Q</Link>
+          </li>
+          <li className="nav-item">
+            <Link to="contact" smooth={true} duration={500}>Contact</Link>
+          </li>
+        </ul>
         </nav>
         <div className='logo'>
           <span className="logo1">Holo</span>
@@ -105,6 +114,7 @@ export default function Header(props) {
           <img className='vector2Img' src="/img/header/Group 12 (1).png" alt="Group 12" />
         </div>
       </div>
-    </header>  
+    </header> 
+
   )
 }
